@@ -2,21 +2,27 @@ package br.unincor.view;
 
 import javax.swing.JOptionPane;
 
-import br.unincor.model.ContaBancaria;
-
 public class ViewGUI {
 
 	public void exibeMsg(String texto) {
 		JOptionPane.showMessageDialog(null, texto);
 	}
 
-	public void exibeErroTransacao(ContaBancaria c) {
-		JOptionPane.showMessageDialog(null, "Erro na transação da conta\n\n" + c.getTitular());
-	}
-
 	public String recebeString(String texto) {
 		String resposta = JOptionPane.showInputDialog(texto);
 		return resposta;
+	}
+	
+	public Boolean recebeBoolean(String texto) {
+		try {
+			int resposta = JOptionPane.showConfirmDialog(null, texto);
+			if(resposta == JOptionPane.YES_OPTION)
+				return Boolean.TRUE;
+			return Boolean.FALSE;
+		} catch (Exception e) {
+			exibeMsg("Entrada inválida!");
+		}
+		return null;
 	}
 
 	public Double recebeDouble(String texto) {
