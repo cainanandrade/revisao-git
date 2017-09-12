@@ -39,4 +39,11 @@ public class Medico {
 	public void setSalario(Double salario) {
 		this.salario = salario;
 	}
+
+	@Override
+	public String toString() {
+		return "Medico [dadosPessoais=" + dadosPessoais + ", noCRM=" + noCRM + ", especialidade=" + especialidade
+				+ ", salario=" + salario + "]";
+	}
+	
 }

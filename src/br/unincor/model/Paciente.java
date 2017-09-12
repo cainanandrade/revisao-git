@@ -56,4 +56,10 @@ public class Paciente {
 	public void setBpm(Double bpm) {
 		this.bpm = bpm;
 	}
+
+	@Override
+	public String toString() {
+		return "Paciente [dadosPessoais=" + dadosPessoais + ", noSUS=" + noSUS + ", alergia=" + alergia + ", pne=" + pne
+				+ ", temperatura=" + temperatura + ", bpm=" + bpm + "]";
+	}
 }
