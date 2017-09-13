@@ -22,6 +22,8 @@ public class Executar {
 		} catch (NSusInvalidoException | MortoException e) {
 			gui.exibeMsg(e.getMessage());
 		}		
+		
+		System.out.println("midificação");
 	}
 		
 }
